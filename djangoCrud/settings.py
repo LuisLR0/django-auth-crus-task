@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'djangoCrud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangocrud',
-        'USER': 'postgres',
-        'PASSWORD': 'gta54321',
-        'HOST': 'localhost',
-        'PORT': '2706',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'koyebdb',
+        'USER': 'koyeb-adm',
+        'PASSWORD': 'b8WIgo1ECPZY',
+        'HOST': 'ep-holy-sky-a2icp4zl.eu-central-1.pg.koyeb.app',
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
