@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block titulo %}LR | Tareas{% endblock %}
+
+{% block contenido %}
+<main class="container-main-tareas">
+
+
+    <div class="tarea_div">
+
+        <h2>Listado de Tareas Pendientes</h2>
+        <ul>
+            {% for tarea in tareas %}
+                {% if not tarea.completado %}
+                    <li>
+                        {% if tarea.important %}
+                            <h3>⭐ {{ tarea.titulo }}</h3>
+                        {% else %}
+                            <h4>{{ tarea.titulo }}</h4>
+                        {% endif %}
+                        <p>{{ tarea.descripcion }}</p>
+                        <p>Tarea Creada: {{ tarea.creacion }}</p>
+                        <a class='tarea_completar' href="{% url 'completar_tarea' tarea.id %}">Completar</a> |
+                        <a href="{% url 'editar_tarea' tarea.id %}">Editar</a> | 
+                        <a class='tarea_delete' href="{% url 'eliminar_tarea' tarea.id %}">Eliminar</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        
+    </div>
+    <div class="tarea_div">
+
+        <h2>Listado de Tareas Completados</h2>
+        <ul>
+            {% for tarea in tareas %}
+                {% if tarea.completado %}
+                    <li>
+                        <h4>{{ tarea.titulo }}</h2>
+                        <p>{{ tarea.descripcion }}</p>
+                        <p>Tarea Creada: {{ tarea.creacion }}</p>
+                        <p>Tarea Finalizada: {{tarea.finalizacion}}</p>
+                        <a class='tarea_delete' href="{% url 'eliminar_tarea' tarea.id %}">Eliminar</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+    </div>
+        
+
+</main>
+{% endblock %}

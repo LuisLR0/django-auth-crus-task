@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --negro-prim: #2a2c31;
+    --negro-sec: #3e4147;
+    --blanco-prim: #f8ffff;
+    --color-prim: #4dced1;
+    --color-prim-hover: #1ac0c4;
+    --color-sec: #5a2e2e;
+    --fuente: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--blanco-prim);
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: var(--negro-sec);
+    width: auto;
+    height: 3rem;
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-left: 3.5rem;
+    width: 100vw;
+    gap: 1.4rem;
+    
+}
+
+.BotonesUsuario {
+    width: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    gap: 1.4rem;
+    right: 3.5rem;
+}
+
+nav ul a {
+    color: var(--blanco-prim);
+    text-decoration: none;
+    font-family: var(--fuente);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 75ms linear;
+
+    &:hover {
+        color: #dadada;
+    }
+}
+
+.container--contenido {
+    margin: 2rem;
+    
+}
+
+/* Inicio */
+
+.container-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+
+    p {
+        font-family: var(--fuente);
+    }
+}
+
+.main-titulo {
+    font-size: 2.1rem;
+    color: var(--negro-prim);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--fuente);
+}
+
+.main-button {
+    background-color: var(--color-prim);
+    color: var(--blanco-prim);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 50ms ease-in-out;
+    text-decoration: none;
+    font-family: var(--fuente);
+    margin-top: 1.5rem;
+    transition: all 75ms linear;
+
+    &:hover {
+        background-color: var(--color-prim-hover);
+    }
+}
+
+/* Registro */
+
+.container-main-registro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 27rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+}
+
+.reg_aviso {
+    display: inline-flex;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-sec);
+    font-family: var(--fuente);
+}
+
+.reg_input {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem;
+
+    label {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        font-family: var(--fuente);
+    }
+
+    input {
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-family: var(--fuente);
+        font-size: 0.9rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    }
+}
+
+.reg-button {
+    background-color: var(--color-prim);
+    color: var(--blanco-prim);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 50ms ease-in-out;
+    text-decoration: none;
+    font-family: var(--fuente);
+    margin-top: 1.5rem;
+    transition: all 75ms linear;
+    font-family: var(--fuente);
+    font-size: 1rem;
+
+    &:hover {
+        background-color: var(--color-prim-hover);
+    }
+}
+
+/* Login */
+
+.container-main-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 27rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+}
+
+.log_aviso {
+    display: inline-flex;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-sec);
+    font-family: var(--fuente);
+}
+
+.log_input {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem;
+
+    label {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        font-family: var(--fuente);
+    }
+
+    input {
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-family: var(--fuente);
+        font-size: 0.9rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    }
+}
+
+.log-button {
+    background-color: var(--color-prim);
+    color: var(--blanco-prim);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 50ms ease-in-out;
+    text-decoration: none;
+    font-family: var(--fuente);
+    margin-top: 1.5rem;
+    transition: all 75ms linear;
+    font-family: var(--fuente);
+    font-size: 1rem;
+
+    &:hover {
+        background-color: var(--color-prim-hover);
+    }
+}
+
+/* Crear Tareas */
+
+.container-main-add_tarea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 27rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+}
+
+.tar_input {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem;
+
+    label {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        font-family: var(--fuente);
+    }
+
+    input {
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-family: var(--fuente);
+        font-size: 0.9rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    }
+
+    input[type="checkbox"]{
+        margin: 0;
+        margin-left: 0.5rem;
+        margin-top: 1.5rem;
+        transform: scale(1.5);
+        width: auto;
+    }
+
+    textarea{
+        resize: none;
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        width: 22rem;
+        font-family: var(--fuente);
+        font-size: 0.9rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    }
+}
+
+.tar-button {
+    background-color: var(--color-prim);
+    color: var(--blanco-prim);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 50ms ease-in-out;
+    text-decoration: none;
+    font-family: var(--fuente);
+    margin-top: 1.5rem;
+    transition: all 75ms linear;
+    font-family: var(--fuente);
+    font-size: 1rem;
+
+    &:hover {
+        background-color: var(--color-prim-hover);
+    }
+}
+
+/* Tareas */
+
+.container-main-tareas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tarea_div {
+    padding: 2rem;
+    width: 30rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--blanco-sec);
+        font-family: var(--fuente);
+    }
+
+    ul li {
+        
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--color-sec);
+        font-family: var(--fuente);
+        list-style: none;
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        width: 25rem;
+        padding: 1.5rem;
+
+        h4 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: var(--negro-prim);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: #191901;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            color: var(--negro-prim);
+
+            &:nth-child(3) {
+                font-size: 0.8rem;
+            }
+    
+            &:nth-child(4) {
+                font-size: 0.8rem;
+            }
+        }
+
+        a {
+            background-color: var(--color-prim);
+            color: var(--blanco-prim);
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 50ms ease-in-out;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 75ms linear;
+            font-family: var(--fuente);
+            font-size: 0.8rem;
+            font-weight: 500;
+        
+            &:hover {
+                background-color: var(--color-prim-hover);
+            }
+        }
+
+        .tarea_delete {
+            background-color: #d71a1a;
+            
+            &:hover {
+                background-color: #d20101;
+            }
+        }
+        
+        .tarea_completar {
+            background-color: #1abd01;
+            
+            &:hover {
+                background-color: #17a801;
+            }
+
+        }
+
+    }
+}

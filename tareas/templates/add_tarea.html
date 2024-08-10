@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block titulo %}LR | Crear Tarea{% endblock %}
+
+{% block contenido %}
+<main class="container-main-add_tarea">
+
+    
+    <form method="post">
+        <h1>Crear Tarea</h1>
+        {% csrf_token %}
+        <div class="tar_input">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="tar-button">
+            Crear
+        </button>
+    </form>
+
+</main>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block titulo %}LR | Home{% endblock %}
+
+{% block contenido %}
+    <main class="container-main">
+        <h2 class="main-titulo">Bienvenido</h2>
+        <p>
+            Bienvenido a nuestro proyecto de gestión de tareas. Nuestro objetivo es desarrollar una plataforma web que permita a los usuarios administrar sus tareas de manera eficaz y organizada. La plataforma ofrecerá funcionalidades como la creación, edición, eliminación y seguimiento de tareas, así como la posibilidad de compartir tareas con otros usuarios. Además, la plataforma proporcionará herramientas de reporte y estadísticas para que los usuarios puedan analizar y obtener información valiosa sobre sus tareas.<br><br>
+
+            Nuestro equipo de desarrollo está trabajando diligentemente para desarrollar y lanzar la plataforma lo antes posible. Estamos agradecidos por su interés en nuestro proyecto y esperamos que pueda disfrutar de la plataforma y aportar su valor a nuestra comunidad.<br><br>
+            
+            Si aún no está registrado, puede hacerlo haciendo clic en el botón "Registrar" que se encuentra en la parte inferior de la página. Una vez registrado, puede iniciar sesión haciendo clic en el botón "Login" que se encuentra en la parte inferior de la página.<br><br>
+            
+            ¡Bienvenido a nuestro proyecto de gestión de tareas!
+        </p>
+        {% if not user.is_authenticated %}
+        <a href="{% url 'login' %}" class="main-button">Login</a>
+        <a href="{% url 'registrar' %}" class="main-button">Registrar</a>
+        {% endif %}
+    </main>
+{% endblock %}

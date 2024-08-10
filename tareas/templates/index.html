@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Inicio</a></li>
+            {% if not user.is_authenticated %}
+                <div class="BotonesUsuario">
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'registrar' %}">Registrar</a></li>
+                </div>
+            {% else %}
+            <li><a href="{% url 'tareas' %}">Tareas</a></li>
+            <li><a href="{% url 'add_tarea' %}">Crear Tarea</a></li>
+            <div class="BotonesUsuario">
+                <li><a href="{% url 'cerrar_sesion' %}">Cerrar Sesion</a></li>
+            </div>
+            {% endif %}
+        </ul>
+    </nav>
+    <article class="container--contenido">
+        {% block contenido %}
+        {% endblock %}
+    </article>
+</body>
+</html>
